@@ -7,15 +7,15 @@ A simple game maths package. Add later more and more functions.
 Support int64 and float64 vectors with X and Y. All Functions are chainable.
 
 ```go
-vector := maths.New[int64]()
+vector := maths.NewVector2D[int64]()
 
-vector = vector.Add(maths.New[int64](1, 2))
-vector = vector.Subtract(maths.New[int64](1, 2))
+vector = vector.Add(maths.NewVector2D[int64](1, 2))
+vector = vector.Subtract(maths.NewVector2D[int64](1, 2))
 vector = vector.Multiply(2)
 vector = vector.Divide(2)
 vectorClone = vector.Clone()
 
-distance := vector.Distance(maths.New[int64](1, 2))
+distance := vector.Distance(maths.NewVector2D[int64](1, 2))
 
 vectorFloat := vector.ToFloat()
 ```

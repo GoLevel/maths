@@ -10,7 +10,7 @@ type Vector2D[T interface {
 }
 
 // New creates a new Vector2D
-func New[T interface {
+func NewVector2D[T interface {
 	int64 | float64
 }](x, y T) Vector2D[T] {
 	return Vector2D[T]{X: x, Y: y}

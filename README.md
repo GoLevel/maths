@@ -2,6 +2,11 @@
 
 A simple game maths package. Add later more and more functions.
 
+- [2D Vector](#2d-vector)
+- [Hex](#hex)
+- [Hex Vector](#hex-vector)
+- [Hex Grid](#hex-grid)
+
 ## 2D Vector
 
 Support int64 and float64 vectors with X and Y. All Functions are chainable.

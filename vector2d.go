@@ -1,6 +1,9 @@
 package maths
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 // Vector2D is a generic implementation of a 2D vector
 type Vector2D[T interface {
@@ -14,6 +17,11 @@ func NewVector2D[T interface {
 	int64 | float64
 }](x, y T) Vector2D[T] {
 	return Vector2D[T]{X: x, Y: y}
+}
+
+// String returns the coordinates as `x:y`
+func (v Vector2D[T]) String() string {
+	return fmt.Sprintf("%v:%v", v.X, v.Y)
 }
 
 // Add adds another vector to the current vector

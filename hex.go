@@ -1,6 +1,7 @@
 package maths
 
 import (
+	"fmt"
 	"math"
 )
 
@@ -16,6 +17,11 @@ func NewHex[T interface {
 	int64 | float64
 }](q, r T) Hex[T] {
 	return Hex[T]{Q: q, R: r}
+}
+
+// String returns the coordinates as `q:r`
+func (h Hex[T]) String() string {
+	return fmt.Sprintf("%v:%v", h.Q, h.R)
 }
 
 // Add returns the sum of two hexes
